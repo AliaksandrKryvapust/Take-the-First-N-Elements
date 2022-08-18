@@ -7,6 +7,6 @@ public class Source {
         System.out.println(Arrays.equals(take(arr, n), new int[]{0, 1, 2}));
     }
     public static int[] take(int[] arr, int n) {
-        return Arrays.copyOf(arr, n);
+        return (arr.length<n)? arr : Arrays.copyOfRange(arr, 0,n);
     }
 }
